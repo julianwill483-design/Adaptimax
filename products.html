@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adaptimax – Bundles</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: #172332;
+        background: #f7f9fb;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 16px max(24px, calc((100% - 1080px) / 2));
+        background: #081625;
+      }
+
+      .logo {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      nav a {
+        padding: 10px 14px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 160ms ease;
+      }
+
+      nav a:hover,
+      nav a[aria-current="page"] {
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      main {
+        width: min(100% - 40px, 900px);
+        margin: 56px auto;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(34px, 5vw, 48px);
+      }
+
+      .page-heading {
+        margin-bottom: 32px;
+        padding: 32px;
+        color: #fff;
+        background:
+          linear-gradient(110deg, rgba(8, 22, 37, 0.93), rgba(8, 22, 37, 0.68)),
+          url("img/background_1.jpg") center 48% / cover no-repeat;
+        border-radius: 10px;
+      }
+
+      .intro {
+        max-width: 680px;
+        margin: 0;
+        color: #e3eaf0;
+        line-height: 1.6;
+      }
+
+      .bundle-list {
+        display: grid;
+        gap: 18px;
+      }
+
+      .bundle {
+        display: grid;
+        grid-template-columns: minmax(180px, 280px) 1fr;
+        align-items: center;
+        gap: 28px;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #e5e9ee;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(23, 35, 50, 0.04);
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .bundle:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(23, 35, 50, 0.09);
+      }
+
+      .bundle img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+
+      .bundle h2 {
+        margin: 0 0 8px;
+        font-size: 22px;
+        color: #0878b9;
+      }
+
+      .bundle p {
+        margin: 0;
+        color: #586575;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 12px 20px;
+        }
+
+        nav {
+          gap: 2px;
+        }
+
+        nav a {
+          padding: 9px 8px;
+          font-size: 14px;
+        }
+
+        main {
+          margin: 36px auto;
+        }
+
+        .page-heading {
+          padding: 24px 20px;
+        }
+
+        .bundle {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" aria-label="Adaptimax Startseite">
+        <img class="logo" src="img/logo_2.png" alt="Adaptimax" />
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="products.html" aria-current="page">Bundles</a>
+        <a href="about.html">Über uns</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-heading">
+        <h1>Unsere Bundles</h1>
+        <p class="intro">Entdecke die passenden Adaptimax-Lösungen für deinen Alltag.</p>
+      </section>
+
+      <section class="bundle-list" aria-label="Bundle-Übersicht">
+        <article class="bundle">
+          <img src="img/logo_1.png" alt="Produktübersicht des Starter Bundles" />
+          <div>
+            <h2>Starter Bundle</h2>
+            <p>Der praktische Einstieg: Dieses Bundle enthält alles Wichtige für den unkomplizierten Start.</p>
+          </div>
+        </article>
+
+        <article class="bundle">
+          <img src="img/logo_1.png" alt="Produktübersicht des Flex Bundles" />
+          <div>
+            <h2>Flex Bundle</h2>
+            <p>Flexibel im Einsatz und vielseitig kombinierbar – eine passende Lösung für jeden Tag.</p>
+          </div>
+        </article>
+
+        <article class="bundle">
+          <img src="img/logo_1.png" alt="Produktübersicht des Komplett Bundles" />
+          <div>
+            <h2>Komplett Bundle</h2>
+            <p>Das Rundum-Paket mit einer umfangreichen Auswahl an praktischen Adaptimax-Produkten.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
